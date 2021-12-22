@@ -4,7 +4,8 @@ This simple script records, and plays the recorded audio back.
 
 # Dependencies
 
-The script needs "arecord" and "mpv" to run.
+The script needs "arecord" and "lame" to compress the recording.
+"mpv" is also used for playing back the audio.
 
 # Usage
 

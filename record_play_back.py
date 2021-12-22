@@ -32,8 +32,9 @@ for filename in os.listdir(dirname):
 new_index = f'{highest + 1}'.zfill(2)
 new_filename = f'{os.path.basename(dirname)}-{new_index}.mp3'
 
-# record
-os.system(f'arecord -f cd {new_filename}')
+# record and compress
+print('Press Ctrl + C to stop recording.')
+os.system(f'arecord -v -f cd -t raw | lame -r -b 192 - {new_filename}')
 
 # play back
 os.system(f'mpv {new_filename}')
